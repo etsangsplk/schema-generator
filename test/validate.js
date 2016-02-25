@@ -47,9 +47,18 @@ var validJson = [
     //colors
 ];
 var invalidJson = [
-  invalidColorCar,
-  invalidColor,
-  extraPropCar
+    {
+      data: invalidColorCar,
+      path: "definitions.car"
+    },
+    {
+      data: invalidColor,
+      path: "definitions.color"
+    },
+    {
+      data: extraPropCar,
+      path: "definitions.car"
+    }
 ];
 
 var validator = new ZSchema({});
