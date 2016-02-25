@@ -1,0 +1,9 @@
+{
+ "description": "Car API",
+ "id": "car-api-schema",
+ "links": [{
+   "href": "https://car.example.com/schemas/car",
+   "rel": "self"
+ }],
+ "title": "Car API"
+}

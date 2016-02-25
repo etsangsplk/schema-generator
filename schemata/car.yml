@@ -1,0 +1,47 @@
+---
+$schema: http://json-schema.org/draft-04/hyper-schema
+title: Car API - Cars
+description: It's a car
+stability: prototype
+strictProperties: true
+additionalProperties: false
+definitions:
+  id:
+    description: unique identifier of car
+    example: 32
+    type:
+      - integer
+  make:
+    description: manufacturer
+    example: Ford
+    type:
+      - string
+  model:
+    description: model name
+    example: Model T
+    type:
+      - string
+  identity:
+    $ref: /schemata/car#/definitions/id
+  cars:
+    description: array of cars
+    type:
+      - array
+    items:
+      $ref: /schemata/car
+links: []
+type: object
+required:
+  - id
+  - make
+  - model
+properties:
+  id:
+    $ref: /schemata/car#/definitions/id
+  make:
+    $ref: /schemata/car#/definitions/make
+  model:
+    $ref: /schemata/car#/definitions/model
+  color:
+    $ref: /schemata/color#/definitions/color
+id: schemata/car

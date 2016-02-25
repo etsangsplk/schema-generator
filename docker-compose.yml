@@ -1,0 +1,6 @@
+schema-generator:
+  image: shinydocker/schema-generator
+  volumes:
+    - ./:/usr/src/app
+  env_file:
+    - ./env.list

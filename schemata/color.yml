@@ -1,0 +1,32 @@
+---
+$schema: http://json-schema.org/draft-04/hyper-schema
+title: Car API - Color
+description: color
+stability: prototype
+strictProperties: true
+additionalProperties: false
+definitions:
+  color:
+    description: exterior color
+    example: black
+    type:
+      - string
+    enum:
+      - black
+      - dark black
+  identity:
+    $ref: /schemata/color#/definitions/color
+  colors:
+    description: array of colors
+    type:
+      - array
+    items:
+      $ref: /schemata/color
+links: []
+type: object
+required:
+  - color
+properties:
+  color:
+    $ref: /schemata/color#/definitions/color
+id: schemata/color
